@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+flake8 = "*"
+autopep8 = "*"
+
+[packages]
+python-docx = "*"
+
+[requires]
+python_version = "3.4"
+
+[scripts]
+start = "python app.py"
+lint = "flake8 ."
+fix = "autopep8 -ivr ."
