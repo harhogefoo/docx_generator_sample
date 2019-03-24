@@ -3,9 +3,9 @@ from docx import Document
 document = Document("before.docx")
 
 for paragraph in document.paragraphs:
-    # 変換前のstyle(フォントなど)を維持する
+    # pragraph.runs: Retain font's style which convert before
     inline = paragraph.runs
     for i in range(len(inline)):
-        inline[i].text = inline[i].text.replace("置換前", "置換後")
+        inline[i].text = inline[i].text.replace("place", "replace")
 
 document.save("after.docx")
